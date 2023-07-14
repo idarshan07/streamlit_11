@@ -42,3 +42,6 @@ def main():
         # Display the uploaded image
         image = Image.open(uploaded_image)
         st.image(image, caption='Uploaded Image', use_column_width=True)
+
+        # Convert the image to RGB mode
+        image = image.convert('RGB')
