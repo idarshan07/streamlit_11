@@ -48,3 +48,15 @@ def main():
 
         # Preprocess the image
         input_tensor = transform(image).unsqueeze(0)
+
+        # Make a prediction
+        with torch.no_grad():
+            output = model(input_tensor)
+            _, predicted_class = torch.max(output, 1)
+            predicted_label = class_labels[predicted_class.item()]
+
+        st.write('Prediction:', predicted_label)
+
+# Run the app
+if __name__ == '__main__':
+    main()
