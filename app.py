@@ -31,3 +31,9 @@ transform = transforms.Compose([
 def main():
     st.title('Image Classification with ResNet-18')
     st.write('Upload an image and the app will predict its class.')
+
+
+    # Image upload
+    uploaded_image = st.file_uploader('Upload an image', type=['png', 'jpg', 'jpeg'])
+    # Define the ImageNet class labels
+    class_labels = load_labels()
