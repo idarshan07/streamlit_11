@@ -25,3 +25,9 @@ transform = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
 ])
+
+
+# Streamlit App
+def main():
+    st.title('Image Classification with ResNet-18')
+    st.write('Upload an image and the app will predict its class.')
