@@ -20,4 +20,8 @@ def load_labels():
         categories = [s.strip() for s in f.readlines()]
         return categories
     
-    
+# Transform the input image
+transform = transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.ToTensor(),
+])
