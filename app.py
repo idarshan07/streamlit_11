@@ -45,3 +45,6 @@ def main():
 
         # Convert the image to RGB mode
         image = image.convert('RGB')
+
+        # Preprocess the image
+        input_tensor = transform(image).unsqueeze(0)
